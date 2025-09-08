@@ -1,0 +1,143 @@
+Develop and design a fully functional, modern, and responsive personal portfolio website for Qadeer Ahmed with the following requirements:
+
+🎨 Design & UI Requirements
+
+Modern, professional, and user-friendly design.
+
+Responsive for all devices (desktop, tablet, mobile).
+
+Use React.js (or Next.js) for frontend with TailwindCSS or styled-components for styling.
+
+Use Framer Motion or GSAP for animations (smooth scroll, fade-in, slide effects).
+
+Use Swiper.js or React-Slick for sliders.
+
+Include dark mode toggle.
+
+Use Lottie animations or SVG icons where needed.
+
+📂 Website Sections
+1. Landing / Home
+
+Fullscreen hero section with:
+
+Profile picture (circular, animated border).
+
+Name: Qadeer Ahmed
+
+Tagline: “Computer Science Graduate | AI & Software Developer | Data Analyst”
+
+Animated typing effect for rotating roles (AI Developer, Web Developer, Mobile App Developer, Data Analyst).
+
+Background animation (particles, gradient waves, or abstract shapes).
+
+2. About Me
+
+Summary from resume:
+“Computer Science graduate with hands-on experience in mobile and web application development, AI, machine learning, and software quality assurance. Skilled in problem-solving, agile collaboration, and end-to-end project execution. Passionate about leveraging technology to solve real-world problems.”
+
+Add a downloadable CV button.
+
+3. Skills
+
+Display skills in categories with animated progress bars or circular charts:
+
+Programming Languages: Python, Java, JavaScript, C
+
+Web & Mobile: HTML, CSS, React Native
+
+Databases: MySQL, SQLite, MongoDB
+
+AI, ML, DL: Model development (Deep Learning, NLP, CV)
+
+Tools & Technologies: Eclipse, VS Code, Jupyter, Git, GitHub, Power BI, Canva
+
+Soft Skills: Problem-Solving, Team Collaboration, Time Management
+
+4. Projects (Portfolio Section with Slider + Cards)
+
+Each project card should have image placeholders, hover effects, and modal popups with details:
+
+Multimodal Suicide Risk Detection Using Deep Learning
+
+AI-based model using NLP + Image Processing.
+
+Features: Suicide risk classification.
+
+Tools: Deep Learning, Python.
+
+University Event App (React Native + Expo)
+
+Mobile app for managing university events.
+
+Features: Registration, Search, Filters, Dark Mode, API integration.
+
+Brain Tumor Detection & Segmentation (YOLOv11 + SAM2)
+
+Deep Learning Computer Vision project.
+
+Detects and segments brain tumors in MRI scans.
+
+5. Experience & Education (Animated Timeline)
+
+Education Timeline:
+
+BS Computer Science – IQRA University, Karachi (2021 – 2025), CGPA: 3.2
+
+Intermediate (Pre-Engineering) – BISE Sukkur, 78% (2020)
+
+Matric (Science) – BISE Sukkur, 77% (2018)
+
+Experience Section (Projects) already listed above.
+
+6. Contact Section
+
+Contact form with fields (Name, Email, Message).
+
+Backend should send form data to email using Node.js + Express + Nodemailer (or EmailJS).
+
+Display personal info + social links:
+
+📧 qadeerhussain385@gmail.com
+
+📱 +92 301 2590076
+
+🔗 LinkedIn: linkedin.com/in/qadeer-ahmed-24310627b
+
+🔗 GitHub: github.com/QADEER-AHMED-cs
+
+7. Footer
+
+Copyright text.
+
+Social icons (LinkedIn, GitHub, Email).
+
+Animated gradient background.
+
+⚙️ Backend Requirements
+
+Use Node.js + Express.js for backend.
+
+Backend handles:
+
+Contact form submission (Nodemailer for email).
+
+(Optional) Store messages in MongoDB.
+
+🚀 Deployment
+
+Make the project ready for deployment on Vercel (frontend) and Render/Heroku (backend).
+
+Add README.md with setup instructions.
+
+✅ Additional Requirements
+
+Include smooth scroll navigation.
+
+Include SEO meta tags.
+
+Fully responsive grid and flexbox layouts.
+
+Optimized images and code splitting.
+
+Professional animations everywhere (but not heavy).
