@@ -67,8 +67,12 @@ export function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
+    <section id="skills" className="py-20 px-6 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/10 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full opacity-50" />
+      <div className="absolute bottom-20 left-10 w-24 h-24 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full opacity-50" />
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,10 +80,10 @@ export function SkillsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
             Skills & Expertise
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -90,15 +94,15 @@ export function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card p-6 rounded-xl shadow-lg"
+              className="bg-gradient-to-br from-card via-card/95 to-card/90 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-primary/10 hover:border-primary/20"
             >
               <div className="text-center mb-6">
-                <div className={`w-16 h-16 ${category.color === "text-primary" ? "bg-primary/10" : "bg-accent/10"} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                <div className={`w-16 h-16 ${category.color === "text-primary" ? "bg-gradient-to-r from-primary/20 to-primary/10" : "bg-gradient-to-r from-accent/20 to-accent/10"} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}>
                   <div className={category.color}>
                     {category.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">{category.title}</h3>
               </div>
 
               <div className="space-y-4">

@@ -86,8 +86,12 @@ export function ProjectsSection() {
 
   return (
     <>
-      <section id="projects" className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+      <section id="projects" className="py-20 px-6 bg-gradient-to-br from-accent/5 via-secondary/5 to-primary/10 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full opacity-50" />
+        <div className="absolute bottom-10 right-20 w-32 h-32 bg-gradient-to-r from-primary/10 to-success/10 rounded-full opacity-50" />
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,10 +99,10 @@ export function ProjectsSection() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               Featured Projects
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-4" />
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4 rounded-full" />
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Here are some of my recent projects that showcase my skills in AI, web development, and mobile applications.
             </p>
@@ -114,7 +118,7 @@ export function ProjectsSection() {
                 viewport={{ once: true }}
               >
                 <Card 
-                  className="cursor-pointer transition-all hover:shadow-xl hover:-translate-y-2"
+                  className="cursor-pointer transition-all hover:shadow-xl hover:-translate-y-2 bg-gradient-to-br from-card via-card/95 to-card/90 border border-primary/10 hover:border-primary/20"
                   onClick={() => setSelectedProject(project)}
                   data-testid={`project-card-${project.id}`}
                 >

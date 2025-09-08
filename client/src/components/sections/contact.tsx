@@ -64,28 +64,28 @@ export function ContactSection() {
       title: "Email",
       value: "qadeerhussain385@gmail.com",
       href: "mailto:qadeerhussain385@gmail.com",
-      color: "bg-primary/10 text-primary",
+      color: "bg-gradient-to-r from-primary/20 to-primary/10 text-primary",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
       value: "+92 301 2590076",
       href: "tel:+923012590076",
-      color: "bg-accent/10 text-accent",
+      color: "bg-gradient-to-r from-accent/20 to-accent/10 text-accent",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       title: "LinkedIn",
       value: "linkedin.com/in/qadeer-ahmed-24310627b",
       href: "https://linkedin.com/in/qadeer-ahmed-24310627b",
-      color: "bg-primary/10 text-primary",
+      color: "bg-gradient-to-r from-primary/20 to-secondary/10 text-primary",
     },
     {
       icon: <Github className="w-6 h-6" />,
       title: "GitHub",
       value: "github.com/QADEER-AHMED-cs",
       href: "https://github.com/QADEER-AHMED-cs",
-      color: "bg-accent/10 text-accent",
+      color: "bg-gradient-to-r from-accent/20 to-accent/10 text-accent",
     },
   ];
 
@@ -108,8 +108,12 @@ export function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-secondary/5 via-primary/5 to-accent/10 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-10 right-10 w-36 h-36 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full opacity-50" />
+      <div className="absolute bottom-20 left-10 w-28 h-28 bg-gradient-to-r from-secondary/10 to-success/10 rounded-full opacity-50" />
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -117,10 +121,10 @@ export function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
             Get In Touch
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-4" />
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4 rounded-full" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together!
           </p>

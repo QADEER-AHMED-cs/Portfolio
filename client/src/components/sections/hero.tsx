@@ -51,8 +51,15 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background" />
+      {/* Enhanced Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/15 to-secondary/10" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-success/10 via-transparent to-warning/10" />
+      
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 animate-pulse" />
+      <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-r from-accent to-secondary rounded-full opacity-30 animate-bounce" />
+      <div className="absolute bottom-40 left-20 w-12 h-12 bg-gradient-to-r from-success to-warning rounded-full opacity-25 animate-pulse" />
+      <div className="absolute bottom-60 right-10 w-24 h-24 bg-gradient-to-r from-warning to-primary rounded-full opacity-20 animate-bounce" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* Profile Picture */}
@@ -63,12 +70,17 @@ export function HeroSection() {
           className="mb-8"
         >
           <div className="relative inline-block">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
-                alt="Qadeer Ahmed - Professional Profile"
-                className="w-full h-full object-cover"
-              />
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-primary via-accent to-secondary p-1 shadow-2xl">
+              <div className="w-full h-full rounded-full overflow-hidden bg-background">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                  alt="Qadeer Ahmed - Professional Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-accent to-primary rounded-full flex items-center justify-center shadow-lg animate-pulse">
+              <span className="text-white text-sm md:text-base">👋</span>
             </div>
           </div>
         </motion.div>
@@ -115,16 +127,18 @@ export function HeroSection() {
             size="lg"
             onClick={() => scrollToSection("projects")}
             data-testid="view-work-button"
+            className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
-            View My Work
+            View My Work ✨
           </Button>
           <Button
             variant="outline"
             size="lg"
             onClick={() => scrollToSection("contact")}
             data-testid="get-in-touch-button"
+            className="border-2 border-gradient-to-r from-accent to-secondary text-accent hover:bg-gradient-to-r hover:from-accent hover:to-secondary hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            Get In Touch
+            Get In Touch 🚀
           </Button>
         </motion.div>
 

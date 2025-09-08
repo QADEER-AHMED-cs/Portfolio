@@ -17,8 +17,12 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section id="about" className="py-20 px-6 bg-gradient-to-br from-success/5 via-warning/5 to-primary/10 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-r from-success/10 to-warning/10 rounded-full opacity-50" />
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full opacity-50" />
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,10 +30,10 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -74,11 +78,11 @@ export function AboutSection() {
 
             <Button
               onClick={handleDownloadCV}
-              className="bg-accent hover:bg-accent/90"
+              className="bg-gradient-to-r from-accent to-secondary hover:from-accent/90 hover:to-secondary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               data-testid="download-cv-button"
             >
               <Download className="w-4 h-4 mr-2" />
-              Download CV
+              Download CV 📄
             </Button>
           </motion.div>
         </div>
