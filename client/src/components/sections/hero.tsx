@@ -17,7 +17,7 @@ export function HeroSection() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const typeSpeed = isDeleting ? 100 : 150;
+    const typeSpeed = isDeleting ? 50 : 80;
     const currentText = roles[currentRole];
     
     const timeout = setTimeout(() => {
@@ -30,7 +30,7 @@ export function HeroSection() {
       } else {
         setDisplayText(currentText.substring(0, displayText.length + 1));
         if (displayText === currentText) {
-          setTimeout(() => setIsDeleting(true), 2000);
+          setTimeout(() => setIsDeleting(true), 1000);
         }
       }
     }, typeSpeed);
@@ -50,31 +50,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Particles Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {Array.from({ length: 50 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [1, 0.8, 1],
-              rotate: [0, 180, 360],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-background" />
 
@@ -83,7 +59,7 @@ export function HeroSection() {
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           className="mb-8"
         >
           <div className="relative inline-block">
@@ -94,28 +70,23 @@ export function HeroSection() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <motion.div
-              className="absolute inset-0 rounded-full border-4 border-primary"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            />
           </div>
         </motion.div>
 
         {/* Name and Title */}
         <motion.h1
-          initial={{ y: 50, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
         >
           Qadeer Ahmed
         </motion.h1>
 
         <motion.p
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.4, delay: 0.3 }}
           className="text-lg md:text-xl text-muted-foreground mb-6"
         >
           Computer Science Graduate | AI & Software Developer | Data Analyst
@@ -123,9 +94,9 @@ export function HeroSection() {
 
         {/* Animated Typing Effect */}
         <motion.div
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
           className="text-2xl md:text-3xl font-semibold text-primary mb-8 h-12 flex items-center justify-center"
         >
           <span className="border-r-2 border-primary animate-pulse">
@@ -135,9 +106,9 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          transition={{ duration: 0.4, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <Button
@@ -161,12 +132,12 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            transition={{ duration: 1.5, repeat: Infinity }}
           >
             <ChevronDown className="w-8 h-8 text-muted-foreground" />
           </motion.div>
