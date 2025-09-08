@@ -67,10 +67,10 @@ export function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/10 relative overflow-hidden">
+    <section id="skills" className="py-20 px-6 bg-secondary/20 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full opacity-50" />
-      <div className="absolute bottom-20 left-10 w-24 h-24 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full opacity-50" />
+      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-r from-primary/6 to-accent/6 rounded-full opacity-40" />
+      <div className="absolute bottom-20 left-10 w-24 h-24 bg-gradient-to-r from-accent/6 to-primary/6 rounded-full opacity-40" />
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div

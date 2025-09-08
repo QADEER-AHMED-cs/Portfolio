@@ -17,10 +17,10 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 bg-gradient-to-br from-success/5 via-warning/5 to-primary/10 relative overflow-hidden">
+    <section id="about" className="py-20 px-6 bg-muted/30 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-r from-success/10 to-warning/10 rounded-full opacity-50" />
-      <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full opacity-50" />
+      <div className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-r from-primary/8 to-accent/8 rounded-full opacity-30" />
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-accent/8 to-primary/8 rounded-full opacity-30" />
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div

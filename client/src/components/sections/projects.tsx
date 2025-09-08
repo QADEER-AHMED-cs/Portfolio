@@ -86,10 +86,10 @@ export function ProjectsSection() {
 
   return (
     <>
-      <section id="projects" className="py-20 px-6 bg-gradient-to-br from-accent/5 via-secondary/5 to-primary/10 relative overflow-hidden">
+      <section id="projects" className="py-20 px-6 bg-muted/20 relative overflow-hidden">
         {/* Background decorative elements */}
-        <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full opacity-50" />
-        <div className="absolute bottom-10 right-20 w-32 h-32 bg-gradient-to-r from-primary/10 to-success/10 rounded-full opacity-50" />
+        <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-primary/6 to-accent/6 rounded-full opacity-30" />
+        <div className="absolute bottom-10 right-20 w-32 h-32 bg-gradient-to-r from-accent/6 to-primary/6 rounded-full opacity-30" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div

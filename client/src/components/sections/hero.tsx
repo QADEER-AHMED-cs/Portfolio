@@ -52,13 +52,13 @@ export function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Enhanced Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/15 to-secondary/10" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-success/10 via-transparent to-warning/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-accent/5 to-secondary/8" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-muted/20 via-transparent to-muted/20" />
       
       {/* Floating Elements */}
-      <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-r from-accent to-secondary rounded-full opacity-30 animate-bounce" />
-      <div className="absolute bottom-40 left-20 w-12 h-12 bg-gradient-to-r from-success to-warning rounded-full opacity-25 animate-pulse" />
-      <div className="absolute bottom-60 right-10 w-24 h-24 bg-gradient-to-r from-warning to-primary rounded-full opacity-20 animate-bounce" />
+      <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full opacity-20 animate-bounce" />
+      <div className="absolute bottom-40 left-20 w-12 h-12 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full opacity-15 animate-pulse" />
+      <div className="absolute bottom-60 right-10 w-24 h-24 bg-gradient-to-r from-primary/15 to-accent/15 rounded-full opacity-10 animate-bounce" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* Profile Picture */}

@@ -108,10 +108,10 @@ export function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-secondary/5 via-primary/5 to-accent/10 relative overflow-hidden">
+    <section id="contact" className="py-20 px-6 bg-secondary/15 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-10 right-10 w-36 h-36 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full opacity-50" />
-      <div className="absolute bottom-20 left-10 w-28 h-28 bg-gradient-to-r from-secondary/10 to-success/10 rounded-full opacity-50" />
+      <div className="absolute top-10 right-10 w-36 h-36 bg-gradient-to-r from-primary/6 to-accent/6 rounded-full opacity-25" />
+      <div className="absolute bottom-20 left-10 w-28 h-28 bg-gradient-to-r from-accent/6 to-primary/6 rounded-full opacity-25" />
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div

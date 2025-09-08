@@ -38,7 +38,7 @@ export function Navigation({ activeSection }: NavigationProps) {
       initial={{ y: -50 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-background/95 via-background/90 to-background/95 backdrop-blur-md border-b border-gradient-to-r from-primary/20 via-accent/20 to-secondary/20"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border"
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
