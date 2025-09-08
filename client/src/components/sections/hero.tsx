@@ -56,7 +56,6 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-tr from-success/10 via-transparent to-warning/10" />
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 animate-pulse" />
       <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-r from-accent to-secondary rounded-full opacity-30 animate-bounce" />
       <div className="absolute bottom-40 left-20 w-12 h-12 bg-gradient-to-r from-success to-warning rounded-full opacity-25 animate-pulse" />
       <div className="absolute bottom-60 right-10 w-24 h-24 bg-gradient-to-r from-warning to-primary rounded-full opacity-20 animate-bounce" />
