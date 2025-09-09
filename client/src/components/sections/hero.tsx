@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 // Import the new profile image
-import profilePic from "g:/Document/Pics/IMG-20250620-WA0049.jpg";
+import profilePic from "@/assets/IMG-20250620-WA0049.jpg";
 
 const roles = [
   "AI Developer",
