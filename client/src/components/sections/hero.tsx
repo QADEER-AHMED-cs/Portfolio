@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
+// Import the new profile image
+import profilePic from "g:/Document/Pics/IMG-20250620-WA0049.jpg";
+
 const roles = [
   "AI Developer",
   "Web Developer",
@@ -72,7 +75,7 @@ export function HeroSection() {
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-primary via-accent to-secondary p-1 shadow-2xl">
               <div className="w-full h-full rounded-full overflow-hidden bg-background">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                  src={profilePic}
                   alt="Qadeer Ahmed - Professional Profile"
                   className="w-full h-full object-cover"
                 />

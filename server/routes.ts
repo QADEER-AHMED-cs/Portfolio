@@ -48,6 +48,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
           await transporter.sendMail(mailOptions);
           console.log('Email sent successfully to qadeerhussain385@gmail.com');
+
+          // Send confirmation email to the person who filled the form
+          const confirmationMailOptions = {
+            from: process.env.EMAIL_USER,
+            to: validatedData.email,
+            subject: 'Thank you for contacting Qadeer Ahmed',
+            html: `
+              <h3>Thank you for reaching out!</h3>
+              <p>Hi ${validatedData.name},</p>
+              <p>Thank you for contacting me through my portfolio website. I have received your message and will get back to you as soon as possible.</p>
+              <hr />
+              <p><strong>Your message:</strong></p>
+              <p><strong>Subject:</strong> ${validatedData.subject}</p>
+              <p>${validatedData.message}</p>
+              <hr />
+              <p>Best regards,<br/>Qadeer Ahmed</p>
+            `
+          };
+          await transporter.sendMail(confirmationMailOptions);
+          console.log('Confirmation email sent to', validatedData.email);
         } catch (emailError) {
           console.error('Email sending failed:', emailError);
           // Don't fail the request if email fails, just log it

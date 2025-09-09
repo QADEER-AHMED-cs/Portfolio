@@ -4,3 +4,26 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+.env
+.env.*
+# Personal/private files
+*.log
+*.local
+*.key
+*.pem
+*.p12
+*.crt
+*.cert
+*.sublime-workspace
+*.sublime-project
+*.vscode/
+*.idea/
+*.swp
+*.tmp
+*.bak
+*.old
+*.orig
+*.secret
+*.private
+*.backup
+g:/Document/Pics/IMG-20250620-WA0049.jpg
