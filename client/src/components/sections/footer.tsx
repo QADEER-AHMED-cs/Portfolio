@@ -58,7 +58,7 @@ export function FooterSection() {
           {/* Copyright */}
           <div className="border-t border-border pt-6">
             <p className="text-muted-foreground text-sm">
-              © 2024 Qadeer Ahmed. All rights reserved. Built with React.js & TailwindCSS.
+              © 2025 Qadeer Ahmed. All rights reserved.
             </p>
           </div>
         </motion.div>
