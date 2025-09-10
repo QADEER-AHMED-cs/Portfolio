@@ -4,9 +4,10 @@ import { Download } from "lucide-react";
 
 export function AboutSection() {
   const handleDownloadCV = () => {
-    // In a real implementation, this would trigger a download
-    // You would replace this with actual CV file path
-    window.open("#", "_blank");
+    const link = document.createElement("a");
+    link.href = "/QadeerAhmed_Resume.pdf"; // path to resume in public folder
+    link.download = "QadeerAhmed_Resume.pdf"; // file name when downloaded
+    link.click();
   };
 
   const stats = [
