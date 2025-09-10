@@ -20,22 +20,21 @@ export default async function handler(req, res) {
       },
     });
 
-    // Send to your email
+    // Email to you
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "qadeerhussain385@gmail.com",
+      to: "qadeerhussain385@gmail.com", // your email
       subject: `Portfolio Contact: ${subject}`,
       html: `
         <h3>New Contact Form Submission</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
     });
 
-    // Confirmation to sender
+    // Confirmation to the sender
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
@@ -43,9 +42,9 @@ export default async function handler(req, res) {
       html: `
         <h3>Thank you for reaching out!</h3>
         <p>Hi ${name},</p>
-        <p>Thank you for contacting me through my portfolio website. I have received your message and will get back to you as soon as possible.</p>
+        <p>I have received your message and will get back to you as soon as possible.</p>
         <hr />
-        <p><strong>Your message:</strong></p>
+        <p><strong>Your Message:</strong></p>
         <p><strong>Subject:</strong> ${subject}</p>
         <p>${message}</p>
         <hr />
@@ -53,8 +52,12 @@ export default async function handler(req, res) {
       `,
     });
 
-    res.status(200).json({ success: true, message: "Thank you for your message! I'll get back to you soon." });
+    return res.status(200).json({
+      success: true,
+      message: "Thank you for your message! I'll get back to you soon.",
+    });
   } catch (error) {
-    res.status(500).json({ error: "Failed to send email." });
+    console.error("Email sending failed:", error);
+    return res.status(500).json({ error: "Failed to send email." });
   }
 }
